@@ -6,7 +6,10 @@ for the dataset uestc-mmea-cl
 </div>
 
 ## Introduction  
-MMDetection-Ref is an open-source referring grounding toolbox based on [MMDetection](https://github.com/open-mmlab/mmdetection), which ﬂexibly supports the integration of natural language and various visual detectors for end-to-end referring expression comprehension task.
+_UESTC-MMEA-CL_ is a new multi-modal activity dataset for continual egocentric activity recognition, which is proposed to promote future studies on continual learning for first-person activity recognition in wearable applications. Our dataset provides not only vision data with auxiliary inertial sensor data but also comprehensive and complex daily activity categories for the purpose of continual learning research. UESTC-MMEA-CL comprises 30.4 hours of fully synchronized first-person video clips, acceleration stream and gyroscope data in total. There are 32 activity classes in the dataset and each class contains approximately 200 samples. We divide the samples of each class into the training set, validation set and test set according to the ratio of 7:2:1.
+
+
+is an o  based on [TBN](https://github.com/ekazakos/temporal-binding-network), which ﬂexibly supports the integration of natural language and various visual detectors for end-to-end referring expression comprehension task.
 
 ## Installation
 * Linux or macOS (Windows is in experimental support)
