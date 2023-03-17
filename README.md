@@ -63,29 +63,16 @@ sh train.sh
 ```
 
 ## Inference
-If you want to evaluate the split set in refcoco, you can modify the test in corresponding config file to change the evaluation dataset.
-```
-test=dict(
-        type=dataset_type,
-        ann_file=data_root+'refcoco/val.json', #val.json, testA.json, testB.json
-        img_prefix=data_root + 'train2014/', #val imageset, testA imageset, testB imageset, 
-        pipeline=test_pipeline))
-```
-Then, you can use the following script for inference using Top1Acc metric.
-```
-#refcoco using dynamic filters to fuse visual features and language features 
-#based on FCOS-R101 detectors.
-./tools/dist_test.sh configs/referring_grounding/refcoco/fcos_r101_concat_refcoco.py work_dirs/fcos_r101_concat_refcoco/epoch_12.pth 8 --eval Top1Acc
-```
-Training and inference for other datasets in different config files are similar to the above description.
+
+
 
 ## Performance and Trained Models
 The performance and trained models will be released soon, please wait...
 ## Acknowledgement
-Thanks MMDetection team for the wonderful open source project!
+Thanks UESTC-MMEA-CL team for the wonderful open source project!
 
 ## Citition
-If you find the mmdetection-ref toolbox useful in your research, please consider citing:  
+If you find the uestc-mmea-cl dataset and code useful in your research, please consider citing:  
 ```
 cite...
 ```
