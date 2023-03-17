@@ -42,8 +42,7 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
     
     ```
    
-5. Pretrain Models: download the [pretrained models](https://drive.google.com/drive/folders/1uAxYujoKWIDngG5VpNzpKlb5KJTuzBdw?usp=sharing) and place the file in 'pretrained_models/'. You can get two types of pretrained models: [coco_train](https://drive.google.com/file/d/1ie3Y4zznidCzbTYmtz4QUK0dY9cwHthx/view?usp=sharing) indicates models are trained using all COCO training data, [coco_train_minus_refer](https://drive.google.com/file/d/1FZEm9F0zSzjewGzr64sEFP6mPEgRxUCN/view?usp=sharing) indicates models are trained excluding COCO training data in RefCOCO, RefCOCO+, and RefCOCOg’s validation+testing.
-
+5. Pretrain Models: 
    You can modify load_from in corresponding config file to change the pretrained models.
     ```
     # assume that you want to use the config file 'configs/referring_grounding/refcoco/fcos_r101_concat_refcoco.py', you can change:
@@ -51,17 +50,16 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
     ```
 ## Train  
 
-Assume that you are under the root directory of this project, and you have activated your virtual environment if needed, and with refcoco dataset in 'data/RefCoco/refcoco'. Here, we use 8GPUs.
+Assume that you have activated your virtual environment the code run needed, and with the dataset UESTC-MMEA-CL in path that  'data/....'. In the train process, we use 2GPUs.
+
+运行之前，请在train.sh文件中修改好想进行训练的具体参数，例如
 ```
-#refcoco using plain concatenatation to fuse visual features and language features 
-#based on FCOS-R101 detectors.
-./tools/dist_train.sh configs/referring_grounding/refcoco/fcos_r101_concat_refcoco.py 8 
+python main.py mydataset RGB Flow STFT STFT_2 --config ./exps/myewc.json --train_list mydataset_train.txt --val_list mydataset_test.txt --mpu_path '/home/amax/Downloads/whx/temporal-binding-network/dataset/gyro/' --arch BNInception --num_segments 8 --dropout 0.5 --epochs 20 -b 8 --lr 0.001 --lr_steps 10 20 --gd 20 --partialbn -j 8
 
 ```
+修改参数之后，只需要运行以下代码
 ```
-#refcoco using dynamic filters to fuse visual features and language features 
-#based on FCOS-R101 detectors.
-./tools/dist_train.sh configs/referring_grounding/refcoco/fcos_r101_dynamic_refcoco.py 8 
+sh train.sh
 ```
 
 ## Inference
@@ -89,18 +87,5 @@ Thanks MMDetection team for the wonderful open source project!
 ## Citition
 If you find the mmdetection-ref toolbox useful in your research, please consider citing:  
 ```
-@inproceedings{qiu2020language,
-  title={Language-aware fine-grained object representation for referring expression comprehension},
-  author={Qiu, Heqian and Li, Hongliang and Wu, Qingbo and Meng, Fanman and Shi, Hengcan and Zhao, Taijin and Ngan, King Ngi},
-  booktitle={Proceedings of the 28th ACM International Conference on Multimedia},
-  pages={4171--4180},
-  year={2020}
-}
-@inproceedings{qiu2022refcrowd,
-  title={RefCrowd: Grounding the Target in Crowd with Referring Expressions},
-  author={Qiu, Heqian and Li, Hongliang and Zhao, Taijin and Wang, Lanxiao and Wu, Qingbo and Meng, Fanman},
-  booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
-  pages={4435--4444},
-  year={2022}
-}
+cite...
 ```
