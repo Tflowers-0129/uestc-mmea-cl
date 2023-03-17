@@ -19,7 +19,7 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
 * GCC 5+
 
 
-1. Please see [get_started.md](https://github.com/QiuHeqian/mmdetection-ref/blob/master/docs/get_started.md) for installation and the basic usage of UESTC-MMEA-CL.
+1.
 
 2. Clone the repository and then install it: 
  
