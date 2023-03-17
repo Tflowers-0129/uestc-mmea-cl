@@ -1,8 +1,8 @@
 # uestc-mmea-cl
 for the dataset uestc-mmea-cl
-# MMDetection-Ref: An Open-Source Referring Grounding Toolbox
+# uestc-mmea-cl -- the new multi-modal activity dataset for continual egocentric activity recognition
 <div align="center">
-  <img src="resources/mmdetection-ref_framework.png" width="700"/>
+  <img src="resources/.png" width="700"/>
 </div>
 
 ## Introduction  
@@ -22,13 +22,9 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
 1. Please see [get_started.md](https://github.com/QiuHeqian/mmdetection-ref/blob/master/docs/get_started.md) for installation and the basic usage of UESTC-MMEA-CL.
 
 2. Clone the repository and then install it: 
-``` 
-git clone https://github.com/.../....git
-cd mmdetection-ref  
-pip install -v -e .  # or "python setup.py develop"  
-```
+
 3. 
-4. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlink。Please ensure that it is used for educational or non-commercial purposes！
+4. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlin. Please ensure that it is used for educational or non-commercial purposes！
 
     ```
     UESTC-MMEA-CL/
