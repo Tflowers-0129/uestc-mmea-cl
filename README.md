@@ -22,9 +22,8 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
 1. Please see [get_started.md](https://github.com/QiuHeqian/mmdetection-ref/blob/master/docs/get_started.md) for installation and the basic usage of UESTC-MMEA-CL.
 
 2. Clone the repository and then install it: 
-
-3. 
-4. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlin. Please ensure that it is used for educational or non-commercial purposes！
+ 
+3. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlin. Please ensure that it is used for educational or non-commercial purposes！
 
     ```
     UESTC-MMEA-CL/
@@ -41,7 +40,10 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
               └── 32_watch_TV/
     
     ```
+4. Data preprocessing
    
+
+
 5. Pretrain Models: 
    You can modify load_from in corresponding config file to change the pretrained models.
     ```
@@ -52,12 +54,12 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
 
 Assume that you have activated your virtual environment the code run needed, and with the dataset UESTC-MMEA-CL in path that  'data/....'. In the train process, we use 2GPUs.
 
-运行之前，请在train.sh文件中修改好想进行训练的具体参数，例如
+Before training, modify the specific parameters you want to train in the train.sh file, for example:
 ```
 python main.py mydataset RGB Flow STFT STFT_2 --config ./exps/myewc.json --train_list mydataset_train.txt --val_list mydataset_test.txt --mpu_path '/home/amax/Downloads/whx/temporal-binding-network/dataset/gyro/' --arch BNInception --num_segments 8 --dropout 0.5 --epochs 20 -b 8 --lr 0.001 --lr_steps 10 20 --gd 20 --partialbn -j 8
 
 ```
-修改参数之后，只需要运行以下代码
+After modifying the parameters, you only need to run the following code 
 ```
 sh train.sh
 ```
