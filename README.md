@@ -8,24 +8,22 @@ for the dataset uestc-mmea-cl
 ## Introduction  
 _UESTC-MMEA-CL_ is a new multi-modal activity dataset for continual egocentric activity recognition, which is proposed to promote future studies on continual learning for first-person activity recognition in wearable applications. Our dataset provides not only vision data with auxiliary inertial sensor data but also comprehensive and complex daily activity categories for the purpose of continual learning research. UESTC-MMEA-CL comprises 30.4 hours of fully synchronized first-person video clips, acceleration stream and gyroscope data in total. There are 32 activity classes in the dataset and each class contains approximately 200 samples. We divide the samples of each class into the training set, validation set and test set according to the ratio of 7:2:1.
 
-The work in the dataset publication paper is mainly based on [_TBN_](https://github.com/ekazakos/temporal-binding-network) and PyCIL toolbox
+The work in the dataset publication paper is mainly based on [_TBN_](https://github.com/ekazakos/temporal-binding-network) and _PyCIL_ toolbox.
 
 ## Installation
-* Linux or macOS (Windows is in experimental support)
-* MMDetection
+* Linux
 * pytorch
 * Python 3.6+
-* PyTorch 1.3+
-* CUDA 9.2+ (If you build PyTorch from source, CUDA 9.0 is also compatible)
+* PyTorch 1.7
+* CUDA 11.0 (If you build PyTorch from source, CUDA 9.0 is also compatible)
 * GCC 5+
-* h5py
-* spacy
 
-1. Please see [get_started.md](https://github.com/QiuHeqian/mmdetection-ref/blob/master/docs/get_started.md) for installation and the basic usage of MMDetection-Ref.
+
+1. Please see [get_started.md](https://github.com/QiuHeqian/mmdetection-ref/blob/master/docs/get_started.md) for installation and the basic usage of UESTC-MMEA-CL.
 
 2. Clone the repository and then install it: 
 ``` 
-git clone https://github.com/QiuHeqian/mmdetection-ref.git
+git clone https://github.com/.../....git
 cd mmdetection-ref  
 pip install -v -e .  # or "python setup.py develop"  
 ```
@@ -61,6 +59,22 @@ pip install -v -e .  # or "python setup.py develop"
     │   │   │   ├── test
 
     ```
+    ```
+    UESTC-MMEA-CL/
+          ├── train.txt
+          ├── val.txt
+          ├── test.txt
+          ├── video/
+          │  ├── 1_upstairs/
+          │  ├──  ...
+          │  └── 32_watch_TV/
+          └── sensor/
+              ├── 1_upstairs/
+              ├──  ...
+              └── 32_watch_TV/
+    
+    ```
+   
 5. Pretrain Models: download the [pretrained models](https://drive.google.com/drive/folders/1uAxYujoKWIDngG5VpNzpKlb5KJTuzBdw?usp=sharing) and place the file in 'pretrained_models/'. You can get two types of pretrained models: [coco_train](https://drive.google.com/file/d/1ie3Y4zznidCzbTYmtz4QUK0dY9cwHthx/view?usp=sharing) indicates models are trained using all COCO training data, [coco_train_minus_refer](https://drive.google.com/file/d/1FZEm9F0zSzjewGzr64sEFP6mPEgRxUCN/view?usp=sharing) indicates models are trained excluding COCO training data in RefCOCO, RefCOCO+, and RefCOCOg’s validation+testing.
 
    You can modify load_from in corresponding config file to change the pretrained models.
