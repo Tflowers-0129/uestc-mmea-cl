@@ -8,7 +8,7 @@ for the dataset uestc-mmea-cl
 ## Introduction  
 _UESTC-MMEA-CL_ is a new multi-modal activity dataset for continual egocentric activity recognition, which is proposed to promote future studies on continual learning for first-person activity recognition in wearable applications. Our dataset provides not only vision data with auxiliary inertial sensor data but also comprehensive and complex daily activity categories for the purpose of continual learning research. UESTC-MMEA-CL comprises 30.4 hours of fully synchronized first-person video clips, acceleration stream and gyroscope data in total. There are 32 activity classes in the dataset and each class contains approximately 200 samples. We divide the samples of each class into the training set, validation set and test set according to the ratio of 7:2:1.
 
-The work in the dataset publication paper is mainly based on [_TBN_](https://github.com/ekazakos/temporal-binding-network) and _PyCIL_ toolbox.
+Our work in the dataset publication paper is mainly based on [_TBN_](https://github.com/ekazakos/temporal-binding-network) and _PyCIL_ toolbox.
 
 ## Installation
 * Linux
@@ -19,11 +19,13 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
 * GCC 5+
 
 
-1.
+1. 
 
 2. Clone the repository and then install it: 
  
 3. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlin. Please ensure that it is used for educational or non-commercial purposes！
+
+    The composition of the dataset is as follows:
 
     ```
     UESTC-MMEA-CL/
@@ -47,8 +49,7 @@ The work in the dataset publication paper is mainly based on [_TBN_](https://git
 5. Pretrain Models: 
    You can modify load_from in corresponding config file to change the pretrained models.
     ```
-    # assume that you want to use the config file 'configs/referring_grounding/refcoco/fcos_r101_concat_refcoco.py', you can change:
-    load_from='pretrained_models/coco_train_minus_refer/fcos_r101.pth' #pretrained_models
+    # assume that you want to use the config file 'configs/
     ```
 ## Train  
 
