@@ -19,11 +19,12 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
 * GCC 5+
 
 
-1. 
+1. Before using our program, make sure that the required environment is configured on your host！
+   you can see the required packages list in the file [文件1]. 
 
-2. Clone the repository and then install it: 
+2. Clone the repository and then install it
  
-3. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlin. Please ensure that it is used for educational or non-commercial purposes！
+3. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlink. Please ensure that it is used for educational or non-commercial purposes！
 
     The composition of the dataset is as follows:
 
@@ -43,13 +44,13 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
     
     ```
 4. Data preprocessing
-   
+   图片需要在视频中抽取获得，抽帧程序在[超链接](代禹师兄GitHub地址)，请按照指示运行。除此之外，传感器数据我们先进行了acc数据/acc_rate，gyro数据/gyro_rate，并且进行中值滤波，窗宽为5
 
 
 5. Pretrain Models: 
    You can modify load_from in corresponding config file to change the pretrained models.
     ```
-    # assume that you want to use the config file 'configs/
+    
     ```
 ## Train  
 
