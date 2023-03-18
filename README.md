@@ -2,7 +2,7 @@
 for the dataset uestc-mmea-cl
 # uestc-mmea-cl -- the new multi-modal activity dataset for continual egocentric activity recognition
 <div align="center">
-  <img src="resources/.png" width="700"/>
+  <img src="NET.png" width="700"/>
 </div>
 
 ## Introduction  
