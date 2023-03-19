@@ -44,7 +44,7 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
     
     ```
 4. Data preprocessing
-   图片需要在视频中抽取获得，抽帧程序在[超链接](代禹师兄GitHub地址)，请按照指示运行。除此之外，传感器数据我们先进行了acc数据/acc_rate，gyro数据/gyro_rate，并且进行中值滤波，窗宽为5
+   The training pictures needs to be extracted in the video, and the frame extraction program is in [hyperlink] (Daiyu senior brother GitHub address), please run it according to the instructions. In addition, we first performed ACC data/acc_rate, GYRO data/gyro_rate for sensor data, and performed median filter with the window width 5.
 
 
 5. Pretrain Models: 
