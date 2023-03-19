@@ -11,8 +11,6 @@ _UESTC-MMEA-CL_ is a new multi-modal activity dataset for continual egocentric a
 _Our work in the dataset publication paper is mainly based on [_TBN_](https://github.com/ekazakos/temporal-binding-network) and _PyCIL_ toolbox. It provides a baseline of multimodal continuous learning based on this dataset._
 
 ## Installation
-* Linux
-* pytorch
 * Python 3.6+
 * PyTorch 1.7
 * CUDA 11.0 (If you build PyTorch from source, CUDA 9.0 is also compatible)
