@@ -18,7 +18,11 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
 
 
 1. Before using our program, make sure that the required environment is configured on your host！
-   you can see the required packages list in the file [文件1]. 
+   you can see the required packages list in the file [_requirements_](https://github.com/Tflowers-0129/uestc-mmea-cl/blob/main/requirements.txt). 
+   just run the code follow can help you to build the required environment：
+     ```
+     conda install --yes --file requirements.txt 
+     ```
 
 2. Clone the repository and then install it
  
