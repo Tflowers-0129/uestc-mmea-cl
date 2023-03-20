@@ -60,7 +60,7 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
 
 Assume that you have activated your virtual environment the code run needed, and with the dataset UESTC-MMEA-CL in path that  'data/....'. In the train process, we use 2GPUs.
 
-Before training, modify the specific parameters you want to train in the train.sh file, of course, you also can  for example:
+Before training, modify the specific parameters you want to train in the train.sh file, for example:
 ```
 python main.py mydataset RGB Flow STFT STFT_2 --config ./exps/myewc.json --train_list mydataset_train.txt --val_list mydataset_test.txt --mpu_path '/home/amax/Downloads/whx/temporal-binding-network/dataset/gyro/' --arch BNInception --num_segments 8 --dropout 0.5 --epochs 20 -b 8 --lr 0.001 --lr_steps 10 20 --gd 20 --partialbn -j 8
 
@@ -69,6 +69,7 @@ After modifying the parameters, you only need to run the following code
 ```
 sh train.sh
 ```
+of course, you also can change the detail parameters at  _opts.py_ in this project.
 
 ## Inference
 
