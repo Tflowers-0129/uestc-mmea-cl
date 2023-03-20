@@ -46,7 +46,8 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
     
     ```
 4. Data preprocessing
-   The training pictures needs to be extracted in the video, and the frame extraction program is in [hyperlink] (Daiyu senior brother GitHub address), please run it according to the instructions. In addition, we first performed ACC data/acc_rate, GYRO data/gyro_rate for sensor data, and performed median filter with the window width 5.
+   The training pictures needs to be extracted in the video, and the frame extraction program is in this [hyperlink](https://github.com/ivipclab/Frame-extractor
+), please run it according to the instructions. In addition, we first performed ACC data/acc_rate, GYRO data/gyro_rate for sensor data, and performed median filter with the window width 5.
 
 
 5. Pretrain Models: 
