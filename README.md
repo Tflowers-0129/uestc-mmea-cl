@@ -17,14 +17,14 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
 * GCC 5+
 
 
-1. Before using our program, make sure that the required environment is configured on your host！
+1. Clone the repository and then install it
+
+2. Before using our program, make sure that the required environment is configured on your host！
    you can see the required packages list in the file [_requirements_](https://github.com/Tflowers-0129/uestc-mmea-cl/blob/main/requirements.txt). 
    just run the code follow can help you to build the required environment：
      ```
      conda install --yes --file requirements.txt 
      ```
-
-2. Clone the repository and then install it
  
 3. If you want to download the dataset [_UESTC-MMEA-CL_](https://ivipclab.github.io/publication_uestc-mmea-cl/mmea-cl/), Please click this hyperlink. Please ensure that it is used for educational or non-commercial purposes！
 
@@ -45,7 +45,7 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
               └── 32_watch_TV/
     
     ```
-4. Data preprocessing
+4. Data preprocessing:
    The training pictures needs to be extracted in the video, and the frame extraction program is in this [hyperlink](https://github.com/ivipclab/Frame-extractor
 ), please run it according to the instructions. In addition, we first performed ACC data/acc_rate, GYRO data/gyro_rate for sensor data, and performed median filter with the window width 5.
 
