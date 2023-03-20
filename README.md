@@ -17,7 +17,7 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
 * GCC 5+
 
 
-1. Clone the repository and then install it
+1. First step, clone the repository and then install it
 
 2. Before using our program, make sure that the required environment is configured on your host！
    you can see the required packages list in the file [_requirements_](https://github.com/Tflowers-0129/uestc-mmea-cl/blob/main/requirements.txt). 
