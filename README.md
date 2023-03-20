@@ -47,7 +47,8 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
     ```
 4. Data preprocessing:
    The training pictures needs to be extracted in the video, and the frame extraction program is in this [hyperlink](https://github.com/ivipclab/Frame-extractor
-), please run it according to the instructions. In addition, we first performed ACC data/acc_rate, GYRO data/gyro_rate for sensor data, and performed median filter with the window width 5.
+), please run it according to the instructions. 
+   In addition, we first performed ACC data/acc_rate, GYRO data/gyro_rate for sensor data, and because the sensor data has outliers, we chose a median filter with a kernel of 5 for filtering, there is zero drift in the gyroscope data, and dedrifting is also performed.
 
 
 5. Pretrain Models: 
@@ -82,4 +83,8 @@ Thanks UESTC-MMEA-CL team for the wonderful open source project!
 If you find the uestc-mmea-cl dataset and code useful in your research, please consider citing:  
 ```
 cite...
+
+
+
+
 ```
