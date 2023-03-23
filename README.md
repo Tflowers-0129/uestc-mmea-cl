@@ -55,7 +55,7 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
 
 ## Train  &  Test
 
-Assume that you have activated your virtual environment the code run needed, and with the dataset UESTC-MMEA-CL in path that  'data/....'. In the train process, we use 2GPUs.
+Assume that you have activated your virtual environment the code run needed, and make sure the dataset is stored where the  _data_manager.py_ specifies in the train process, we use 2GPUs.
 
 Before training, modify the specific parameters you want to train in the train.sh file, for example:
 ```
