@@ -13,7 +13,7 @@ _Our work in the dataset publication paper is mainly based on [_TBN_](https://gi
 ## Installation
 * Python 3.6+
 * PyTorch 1.7
-* CUDA 11.0 (If you build PyTorch from source, CUDA 9.0 is also compatible)
+* CUDA 11.0
 * GCC 5+
 
 
